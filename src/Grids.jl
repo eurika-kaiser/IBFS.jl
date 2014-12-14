@@ -1,8 +1,9 @@
-module GridTypes
+module Grids
 using DataTypes
 
-#abstract Grid
-    type StaggeredGrid2D# <: Grid
+export StaggeredGrid2D, getExtrapolatedValue
+
+    type StaggeredGrid2D
         nx::Int
         ny::Int
         nu::Int
@@ -31,6 +32,11 @@ using DataTypes
 
             return this
         end
-    end #StaggeredGrid2D
+    end #type
+
+    # linear extrapolation of value inside grid to next point in ghost region
+    function getExtrapolatedValue(ubc,u)
+        return 2.0*ubc-u
+    end #fun
 
 end #module
