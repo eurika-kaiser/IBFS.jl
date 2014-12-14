@@ -1,5 +1,15 @@
 module IBFS
 
-# package code goes here
-println("Hello world!")
+using DataTypes
+using Solvers
+
+# Parameters structure
+
+export DataTypes
+export Solvers
+
+    filename = "ibfs.conf"
+    println("Hello world!")
+    test = 2+2
 end # module
+
