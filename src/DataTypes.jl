@@ -6,27 +6,27 @@ module DataTypes
         bc_bottom   ::Int
         bc_right         ::Int
         bc_top           ::Int
-        flow_magnitude   ::Float64
-        flow_angle       ::Float64
+        flow_magnitude   ::Real
+        flow_angle       ::Real
 
-        Problem() = new()
+        Problem() = new(0,0,0,0,0,0.0,0.0)
     end
 
     type Grid
         nx          ::Int
         ny          ::Int
-        height      ::Real
         width       ::Real
+        height      ::Real
 
-        Grid() = new()
+        Grid() = new(0,0,0.0,0.0)
     end
 
     type Solver
-        cg_eps      ::Float64
-        timestep    ::Float64
+        cg_eps      ::Real
+        timestep    ::Real
         nt          ::Int
 
-        Solver() = new()
+        Solver() = new(0.0,0.0,0)
     end
 
     type Parameters
@@ -34,7 +34,7 @@ module DataTypes
         grid::Grid
         solver::Solver
 
-        Parameters() = new()
+        Parameters() = new(Problem(), Grid(), Solver())
     end
 
 

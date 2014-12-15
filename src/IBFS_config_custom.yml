@@ -1,0 +1,20 @@
+system:
+    reynolds:    100
+    bc_left:     0
+    bc_bottom:   0
+    bc_right:    0
+    bc_top:      1
+    flow_mag:    1
+    flow_ang:    0
+
+grid:
+    implementation: "StaggeredGrid"
+    nx:     21
+    ny:     21
+    height: 1
+    length: 1
+
+solver:
+    cg_eps:     1e-6
+    timestep:   0.001
+    nt:         100

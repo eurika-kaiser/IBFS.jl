@@ -1,0 +1,20 @@
+problem:
+    reynolds:    100
+    bc_left:     0
+    bc_bottom:   0
+    bc_right:    0
+    bc_top:      1
+    flow_magnitude:    1
+    flow_angle:    0
+
+grid:
+    implementation: "StaggeredGrid2D"
+    nx:     20
+    ny:     20
+    height: 1
+    length: 1
+
+solver:
+    cg_eps:     1e-6
+    timestep:   0.001
+    nt:         100
